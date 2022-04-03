@@ -1,5 +1,5 @@
 # Counter
-This is a simple counter made as a project for Start2Impact with HTML, CSS and JavaScript which lets the user either increase or decrease the number shown by clicking on the respective button.
+This is a simple counter made as a project for [Start2Impact](https://www.start2impact.it/) with HTML, CSS and JavaScript which lets the user either increase or decrease the number shown by clicking on the respective button.
 ![Gif demonstrating counter usage](https://github.com/CaptainNickilism/counter/blob/47b2ef9d137aa67748778f5a42432ba4f4fd3a5e/counter_demo.gif)
 
 ## Installation
