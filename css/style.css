@@ -21,7 +21,7 @@ body {
    -webkit-user-select: none;
    -ms-user-select: none;
    user-select: none;
-}
+}                       /* GENERAL RULES */
 
 #display {                    /* PROMPT AND COUNTER  CONTAINER */
    display: flex;
@@ -31,7 +31,7 @@ body {
    align-items: center;
 }
 
-   #display h2 {                 /* PROMPT */
+   #title {                 /* PROMPT */
       text-align: center;
       font-size: 3.6vw;
       font-family: 'Work Sans', sans-serif;
@@ -41,7 +41,7 @@ body {
       height: 10vh;
    }
 
-   #display h1 {                 /* COUNTER */
+   #counter {                 /* COUNTER */
       text-align: center;
       font-size: 10vw;
       font-family: 'Yantramanav', sans-serif;
@@ -106,13 +106,9 @@ body {
             opacity: 0.15;
          }
 
-
-
       #decreaseButton {                /* DECREASE BUTTON */
          --button-color: #EE6767;      /* RED */
       }
-
-
 
       #increaseButton {                /* INCREASE BUTTON */
          --button-color: #26FBD4;      /* GREEN */

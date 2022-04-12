@@ -1,14 +1,41 @@
 window.addEventListener('DOMContentLoaded', (event) => {
 
-   // DOM SELECTIONS
-   const increaseButton = document.querySelector('#decreaseButton'); // DECREASE DOM ELEMENT
-   const decreaseButton = document.querySelector('#increaseButton'); // INCREASE DOM ELEMENT
-   const counter = document.querySelector('#counter'); // COUNTER DOM ELEMENT
-   let counterNumber = Number(counter.innerHTML);      // COUNTER NUMBER
+   let display = document.createElement('div');
+   display.id = 'display';
+   document.body.append(display);
+
+   let title = document.createElement('h2');
+   title.id = 'title';
+   title.innerHTML = "PRESS <strong>-</strong> OR <strong>+</strong> TO <strong>DECREASE</strong> OR <strong>INCREASE</strong> THE NUMBER.";
+   display.append(title);
+
+   let counter = document.createElement('h1');
+   counter.id = "counter";
+   counter.innerHTML = 0;
+   display.append(counter);
+
+   let buttons = document.createElement('div');
+   buttons.id = 'buttons';
+   document.body.append(buttons);
+
+   let decreaseButton = document.createElement('button');
+   decreaseButton.id = "decreaseButton";
+   decreaseButton.classList.add('button');
+   decreaseButton.innerHTML = "-";
+   buttons.append(decreaseButton);
+
+   let increaseButton = document.createElement('button');
+   increaseButton.id = "increaseButton";
+   increaseButton.classList.add('button');
+   increaseButton.innerHTML = "+";
+   buttons.append(increaseButton);
+
+
+   let counterNumber = Number(counter.innerHTML);                    // COUNTER NUMBER
 
    // EVENT LISTENERS
-   increaseButton.addEventListener('click', decreaseCounter);  // CLICK FUNCTIONS
-   decreaseButton.addEventListener('click', increaseCounter);  // CLICK FUNCTIONS
+   increaseButton.addEventListener('click', increaseCounter);  // CLICK FUNCTIONS
+   decreaseButton.addEventListener('click', decreaseCounter);  // CLICK FUNCTIONS
    increaseButton.addEventListener('mousemove', shineEffect);  // HOVER FUNCTIONS
    decreaseButton.addEventListener('mousemove', shineEffect);  // HOVER FUNCTIONS
 
@@ -40,7 +67,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
          counter.classList.remove('changedCounter');  // ...remove the class
       }
    }
-
-
-
 });
